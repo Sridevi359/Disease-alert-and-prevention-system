@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Disease Alert & Prevention System</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f9ff;
+  margin: 0;
+  padding: 0;
+  background-image: url('/welcome.image.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+header {
+  background-color: #0077b6;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  background: white;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: #0077b6;
+}
+
+form input, form textarea, form button {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  background-color: #0077b6;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #005f87;
+}
+
+footer {
+  background-color: #0077b6;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Disease Alert & Prevention System</h1>
+    <p>Stay updated. Stay safe.</p>
+    </div>
+  </header>
+
+  <main>
+    <section id="alert">
+      <h2>Current Alerts</h2>
+      <ul>
+        <li>Dengue outbreak in Lakshmaneswaram , Andhra pradesh</li>
+        <li>COVID-19 cases rising in Tanuku</li>
+      </ul>
+    </section>
+
+    <section id="prevention">
+      <h2>Prevention Tips</h2>
+      <ol>
+        <li>Use mosquito repellents and nets.</li>
+        <li>Wear masks in crowded places.</li>
+        <li>Drink clean, boiled water.</li>
+      </ol>
+    </section>
+
+    <section id="feedback">
+      <h2>Report a Disease or Symptom</h2>
+      <form id="reportForm">
+        <input type="text" id="name" placeholder="Your Name" required /><br><br>
+        <input type="text" id="location" placeholder="Your Location" required /><br><br>
+        <textarea id="symptom" placeholder="Describe symptoms..." required></textarea><br><br>
+        <button type="submit">Submit</button>
+      </form>
+      <p id="thankYouMsg" style="display:none;">Thank you for your report!</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Disease Prevention Initiative</p>
+  </footer>
+
+  <script>
+    document.getElementById("reportForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+  document.getElementById("thankYouMsg").style.display = "block";
+  alert("Thank you! your submission has been received");
+  this.reset();
+});
+
+
+  </script>
+</body>
+</html>
